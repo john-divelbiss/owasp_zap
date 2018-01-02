@@ -31,3 +31,8 @@ This is an important section as it deals with how ZAP logs in/out of csuite
     *  \Q<a href="/erp/logout">Logout</a>\E - when zap sees this in the source, it considers the application "logged in"
     *  \Q<a href="?s_mobile=1" id="desktop_link">Mobile Site</a>\E - when zap sees this in the source ,it considers the application "logged out"
   
+## Users
+This is where you define who is logging in the system during the scan.  In this case I used the user "luke"
+
+## Remaining Sections
+The remaining sections were left as is
