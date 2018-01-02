@@ -18,3 +18,8 @@ This section provides information on how the CSuite Context was created.  Once t
     *  Technology - DB - Postgres
     *  OS - Linux
     *  WS - Apache
+    
+## Authentication
+This is an important section as it deals with how ZAP los in/out of csuite
+![Authentication](/screenshots/Authentication.png?raw=true "Authentication")
+  
