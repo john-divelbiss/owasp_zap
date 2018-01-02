@@ -28,4 +28,4 @@ The current context file included contains:
   
   
 ## Import CSuite Context
-Going forward, we can maintain a single context file that details site information, located:  [HERE](/contexts/Csuite.context)
+Going forward, we can maintain a single context file that details site information, located:  [HERE](/context/Csuite.context)
