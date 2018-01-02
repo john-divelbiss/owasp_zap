@@ -34,7 +34,32 @@ First, we need to remove the Default Context.  It includes default tests/scans t
 
 Next, import the CSuite context:  File -> Import Context -> CSuite.context 
 
-## Import Baseline Session
-The baseline session for csuite contains the list of urls that ZAP previously scanned (spidering CSuite takes several hours).  It's important to note, that this baseline spidering will need to be redone from time to time.  
+The Context properties screen will pop up.  At this point, we can just hit ok, as the CSuite.context has the info we need.
 
-An alternative would be to not import the baseline session, and perform a spider scan prior to the security scan (more on that later)
+## Import Baseline Session
+We'll be using the session file located:  [Session File](https://drive.google.com/open?id=1r5bj-bxrQjBALXhJpipIM7w-dsFKNg4D)
+  * The session file is too large for github.  The session file at this point just contains information about how to attack CSuite.  
+
+The baseline session for csuite contains the list of urls that ZAP previously scanned (spidering CSuite can take several hours).  It's important to note, that this baseline spidering will need to be redone from time to time.  
+
+An alternative would be to not import the baseline session, and perform a spider scan prior to the security scan (more on that later).  This would take longer to run the security scan, but would ensure that we have the latest list of URLs.
+
+## Snapshot session
+This is not a necessary step, but is extremely useful when first starting.  Since ZAP creates giant log files, running multiple scans needs to be done in a new session each time.  Creating a snapshot at this point allows for quickly creating a "scan session".  
+
+File -> Snapshot Session as...(Name of snapshot)
+
+You will continue working with the session imported above (or a new one if not imported).  A common scenario/workflow I would run into:
+  * Setup session for ZAP to scan (MYSession)
+  * Create a snapshot (MYSession-20171212)
+  * Begin a scan (using MYSession)
+  * Some point scan would need to be stopped or issues occurred.
+  * Close/reset ZAP...however, now my base_line files are huge 
+  * Remove the MYSession session files
+  * Import the snapshot created earlier
+  * Create a new snapshot (MYSession-2-20171212)
+  * Begin Scan using (MYSession-20171212)
+  * Repeat if needed....
+
+## Perform Active Scan
+
