@@ -74,4 +74,4 @@ At this point we are ready to perform a security scan:  Tools -> Active Scan
   * Start Scan
 
 You can view the progress of the scan:
-![Progress](/screenshots/Progess.png?raw=true "Progress")
+![Progress](/screenshots/Progress.png?raw=true "Progress")
