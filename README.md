@@ -62,4 +62,16 @@ You will continue working with the session imported above (or a new one if not i
   * Repeat if needed....
 
 ## Perform Active Scan
+At this point we are ready to perform a security scan:  Tools -> Active Scan
 
+![Active Scan](/screenshots/active_scan.png?raw=true "Active scan")
+
+
+  * Starting Point - Choose Contexts -> CSuite
+  * Policy - Default Policy (as defined in the CSuite.context)
+  * Context - CSuite
+  * User - luke 
+  * Recurse - true
+  * Start Scan
+
+  
