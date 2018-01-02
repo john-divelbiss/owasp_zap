@@ -12,12 +12,12 @@ When first running ZAP, you'll be presented with the following dialog:
 This option can always be changed later in Options -> Database, however, for the time being I've been leaving it to yes.  But.....
 
 ## ZAP Sessions vs Contexts- IMPORTANT!!
-###Sessions
+### Sessions
 ZAP logs everything...EVERYTHING.  During a single session security scan, log files can reach 2-3 GB in size, running multiple scans on the same session will kill your machine.   It's been my experience that when running this against csuite, one security run should be considered one session.  Meaning, everytime a new csuite scan occurs we should create a new session. 
 
 It's important to keep on eye on your session files so they don't get too big and slow things down.  ZAP allowed a 12GB session file be created, which was unusable when finished.
 
-###Contexts
+### Contexts
 Context contain the details of the site being scanned.  The idea is that contexts deal with detail about a site to attack, and sessions are the details of what/how contexts executed.
 
 The current context file included contains:
