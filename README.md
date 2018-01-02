@@ -23,7 +23,9 @@ Context contain the details of the site being scanned.  The idea is that context
 The current context file included contains:
   * Details of the site being scanned (demo-local.fcsuite.com)
   * Authentication details for the scanner
-  * List of urls to scan against 
+  * List of urls to scan against
   * List of attackes to perform against the list of urls
   
   
+## Import CSuite Context
+Going forward, we can maintain a single context file that details site information, located:  [HERE](/contexts/Csuite.context)
