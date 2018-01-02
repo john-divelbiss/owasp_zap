@@ -17,15 +17,24 @@ ZAP logs everything...EVERYTHING.  During a single session security scan, log fi
 
 It's important to keep on eye on your session files so they don't get too big and slow things down.  ZAP allowed a 12GB session file be created, which was unusable when finished.
 
+We have created a baseline session that has pre-spidered csuite.  The baseline session populates urls for ZAP to scan, which speeds up the security scan. 
+
 ### Contexts
 Context contain the details of the site being scanned.  The idea is that contexts deal with detail about a site to attack, and sessions are the details of what/how contexts executed.
 
 The current context file included contains:
   * Details of the site being scanned (demo-local.fcsuite.com)
   * Authentication details for the scanner
-  * List of urls to scan against
   * List of attackes to perform against the list of urls
-  
-  
+
 ## Import CSuite Context
-Going forward, we can maintain a single context file that details site information, located:  [HERE](contexts/CSuite.context)
+We'll be using the context file located:  [CSuite.context](contexts/CSuite.context)
+
+First, we need to remove the Default Context.  It includes default tests/scans that are not applicable to CSuite and will interfer with our scans.   Right Click Default Context -> Delete
+
+Next, import the CSuite context:  File -> Import Context -> CSuite.context 
+
+## Import Baseline Session
+The baseline session for csuite contains the list of urls that ZAP previously scanned (spidering CSuite takes several hours).  It's important to note, that this baseline spidering will need to be redone from time to time.  
+
+An alternative would be to not import the baseline session, and perform a spider scan prior to the security scan (more on that later)
