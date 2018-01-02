@@ -20,6 +20,14 @@ This section provides information on how the CSuite Context was created.  Once t
     *  WS - Apache
     
 ## Authentication
-This is an important section as it deals with how ZAP los in/out of csuite
+This is an important section as it deals with how ZAP logs in/out of csuite
 ![Authentication](/screenshots/Authentication.png?raw=true "Authentication")
+  
+  * Login Form Target URL:  http://demo-local.fcsuite.com/erp.  The url where the user logs in
+  * Login Request POST Data:  login={%username%}&passwd={%password%}.  Tells ZAP to post the username/password as these key/val pairs
+  * Username Parameter: login.  Used by zap for username replacement
+  * Password Parameter: passwd.  Used by zap for password replacement
+  * Regex patterns:
+    *  \Q<a href="/erp/logout">Logout</a>\E - when zap sees this in the source, it considers the application "logged in"
+    *  \Q<a href="?s_mobile=1" id="desktop_link">Mobile Site</a>\E - when zap sees this in the source ,it considers the application "logged out"
   
